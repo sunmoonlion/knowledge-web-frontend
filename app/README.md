@@ -1,6 +1,6 @@
-# tpl-web-frontend
+# knowledge-web-frontend
 
-SunmoonAI 的 Next Web 通用模板。B2~B4 期间它与当前 `tpl-web-backend`（Nest Web BFF）
+SunmoonAI 的 Next Web 通用模板。B2~B4 期间它与当前 `knowledge-backend`（Nest Web BFF）
 组成发布和验收单元；B5/B6 后默认配对同契约 FastAPI BFF，Nest 作为可选 profile。
 模板提供 App Router、明确的 public/authenticated 渲染边界、
 next-intl、Tailwind/shadcn UI、同源 `/api` 接入和自托管 standalone 构建。
@@ -21,7 +21,7 @@ corepack pnpm dev
 季度检查 LTS 生命周期，并在 EOL 前至少六个月启动下一次受控升级。
 
 首次使用时，从 `.env.example` 生成未提交的 `.env.local`。浏览器 API 固定为
-同源 `/api`；`DEPLOYMENT_ENV`、`AUTH_APP`、`APP_ORIGIN`、`WEB_BACKEND_INTERNAL_URL`、`DEPLOYMENT_ID`
+同源 `/api`；`DEPLOYMENT_ENV`、`AUTH_APP`、`APP_ORIGIN`、`BACKEND_INTERNAL_URL`、`DEPLOYMENT_ID`
 属于 server-only 运行时契约。不要把 Casdoor、Redis、服务 token 或其他凭据
 放进 `NEXT_PUBLIC_*` 或前端仓库。
 

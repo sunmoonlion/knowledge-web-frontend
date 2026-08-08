@@ -23,7 +23,7 @@ export async function fetchRunSnapshot(
   runId: string,
   fetchImpl: typeof fetch = fetch,
 ): Promise<RunSnapshot> {
-  return requestSnapshot(`/api/runs/${encodeURIComponent(runId)}`, { method: 'GET' }, fetchImpl)
+  return requestSnapshot(`/api/web/v1/runs/${encodeURIComponent(runId)}`, { method: 'GET' }, fetchImpl)
 }
 
 export async function submitRunAction(
@@ -33,7 +33,7 @@ export async function submitRunAction(
   fetchImpl: typeof fetch = fetch,
 ): Promise<RunSnapshot> {
   return requestSnapshot(
-    `/api/runs/${encodeURIComponent(runId)}/actions`,
+    `/api/web/v1/runs/${encodeURIComponent(runId)}/actions`,
     {
       method: 'POST',
       headers: {
