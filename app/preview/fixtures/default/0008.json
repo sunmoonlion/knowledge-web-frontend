@@ -1,0 +1,1079 @@
+{
+ "dataset": "sh600009-financials",
+ "title": "上海机场 财务报表",
+ "security_code": "600009",
+ "data_version": "sh600009-financials-9fd91db79529e208",
+ "start_date": "1994-12-31",
+ "end_date": "2026-06-30",
+ "default": false,
+ "updated_at": "2026-09-27T00:00:00Z",
+ "sources": [
+  {
+   "key": "statement_source",
+   "label": "报表数据的来源",
+   "text": "东方财富 F10 财务分析；第三方网站整理的数据，不是法定披露原文"
+  },
+  {
+   "key": "official_source",
+   "label": "核对用的原文",
+   "text": "巨潮资讯网年度报告原文：2017年年度报告、2018年年度报告、2019年年度报告、上海机场2020年年度报告、上海机场2021年年度报告、上海机场2022年年度报告、上海机场2023年年度报告、上海机场2024年年度报告、上海机场2025年年度报告"
+  },
+  {
+   "key": "verified_range",
+   "label": "核对过的范围",
+   "text": "年报 2017 至 2025 年的关键科目已与年度报告原文逐项核对"
+  }
+ ],
+ "tables": [
+  {
+   "name": "balance_sheet",
+   "kind": "data",
+   "row_count": 110,
+   "columns": [
+    {
+     "name": "security_code",
+     "type": "TEXT",
+     "label": "证券代码",
+     "unit": null
+    },
+    {
+     "name": "report_date",
+     "type": "TEXT",
+     "label": "报告期末日",
+     "unit": null
+    },
+    {
+     "name": "report_type",
+     "type": "TEXT",
+     "label": "报告类型：年报、中报、一季报、三季报",
+     "unit": null
+    },
+    {
+     "name": "fiscal_year",
+     "type": "INTEGER",
+     "label": "会计年度",
+     "unit": null
+    },
+    {
+     "name": "basis",
+     "type": "TEXT",
+     "label": "口径：原始披露、追溯调整后、未核实",
+     "unit": null
+    },
+    {
+     "name": "verified",
+     "type": "INTEGER",
+     "label": "是否已与法定披露原文核对（1 是 0 否）",
+     "unit": null
+    },
+    {
+     "name": "verified_against",
+     "type": "TEXT",
+     "label": "核对所依据的年度报告",
+     "unit": null
+    },
+    {
+     "name": "aggregator_notice_date",
+     "type": "TEXT",
+     "label": "第三方数据里的公告日，不是法定披露日，不得当作披露时点",
+     "unit": null
+    },
+    {
+     "name": "currency",
+     "type": "TEXT",
+     "label": "币种",
+     "unit": null
+    },
+    {
+     "name": "total_assets",
+     "type": "REAL",
+     "label": "资产总计",
+     "unit": "元"
+    },
+    {
+     "name": "total_liabilities",
+     "type": "REAL",
+     "label": "负债合计",
+     "unit": "元"
+    },
+    {
+     "name": "total_equity",
+     "type": "REAL",
+     "label": "所有者权益合计",
+     "unit": "元"
+    },
+    {
+     "name": "total_parent_equity",
+     "type": "REAL",
+     "label": "归属于母公司所有者权益合计",
+     "unit": "元"
+    },
+    {
+     "name": "minority_equity",
+     "type": "REAL",
+     "label": "少数股东权益",
+     "unit": "元"
+    },
+    {
+     "name": "total_liab_equity",
+     "type": "REAL",
+     "label": "负债和所有者权益总计",
+     "unit": "元"
+    },
+    {
+     "name": "monetaryfunds",
+     "type": "REAL",
+     "label": "货币资金",
+     "unit": "元"
+    },
+    {
+     "name": "accounts_rece",
+     "type": "REAL",
+     "label": "应收账款",
+     "unit": "元"
+    },
+    {
+     "name": "inventory",
+     "type": "REAL",
+     "label": "存货",
+     "unit": "元"
+    },
+    {
+     "name": "total_current_assets",
+     "type": "REAL",
+     "label": "流动资产合计",
+     "unit": "元"
+    },
+    {
+     "name": "long_equity_invest",
+     "type": "REAL",
+     "label": "长期股权投资",
+     "unit": "元"
+    },
+    {
+     "name": "fixed_asset",
+     "type": "REAL",
+     "label": "固定资产",
+     "unit": "元"
+    },
+    {
+     "name": "cip",
+     "type": "REAL",
+     "label": "在建工程",
+     "unit": "元"
+    },
+    {
+     "name": "useright_asset",
+     "type": "REAL",
+     "label": "使用权资产",
+     "unit": "元"
+    },
+    {
+     "name": "intangible_asset",
+     "type": "REAL",
+     "label": "无形资产",
+     "unit": "元"
+    },
+    {
+     "name": "total_noncurrent_assets",
+     "type": "REAL",
+     "label": "非流动资产合计",
+     "unit": "元"
+    },
+    {
+     "name": "short_loan",
+     "type": "REAL",
+     "label": "短期借款",
+     "unit": "元"
+    },
+    {
+     "name": "accounts_payable",
+     "type": "REAL",
+     "label": "应付账款",
+     "unit": "元"
+    },
+    {
+     "name": "noncurrent_liab_1year",
+     "type": "REAL",
+     "label": "一年内到期的非流动负债",
+     "unit": "元"
+    },
+    {
+     "name": "total_current_liab",
+     "type": "REAL",
+     "label": "流动负债合计",
+     "unit": "元"
+    },
+    {
+     "name": "long_loan",
+     "type": "REAL",
+     "label": "长期借款",
+     "unit": "元"
+    },
+    {
+     "name": "bond_payable",
+     "type": "REAL",
+     "label": "应付债券",
+     "unit": "元"
+    },
+    {
+     "name": "lease_liab",
+     "type": "REAL",
+     "label": "租赁负债",
+     "unit": "元"
+    },
+    {
+     "name": "total_noncurrent_liab",
+     "type": "REAL",
+     "label": "非流动负债合计",
+     "unit": "元"
+    },
+    {
+     "name": "share_capital",
+     "type": "REAL",
+     "label": "实收资本（股本）",
+     "unit": "元"
+    },
+    {
+     "name": "unassign_rpofit",
+     "type": "REAL",
+     "label": "未分配利润",
+     "unit": "元"
+    }
+   ]
+  },
+  {
+   "name": "cash_flow",
+   "kind": "data",
+   "row_count": 103,
+   "columns": [
+    {
+     "name": "security_code",
+     "type": "TEXT",
+     "label": "证券代码",
+     "unit": null
+    },
+    {
+     "name": "report_date",
+     "type": "TEXT",
+     "label": "报告期末日",
+     "unit": null
+    },
+    {
+     "name": "report_type",
+     "type": "TEXT",
+     "label": "报告类型：年报、中报、一季报、三季报",
+     "unit": null
+    },
+    {
+     "name": "fiscal_year",
+     "type": "INTEGER",
+     "label": "会计年度",
+     "unit": null
+    },
+    {
+     "name": "basis",
+     "type": "TEXT",
+     "label": "口径：原始披露、追溯调整后、未核实",
+     "unit": null
+    },
+    {
+     "name": "verified",
+     "type": "INTEGER",
+     "label": "是否已与法定披露原文核对（1 是 0 否）",
+     "unit": null
+    },
+    {
+     "name": "verified_against",
+     "type": "TEXT",
+     "label": "核对所依据的年度报告",
+     "unit": null
+    },
+    {
+     "name": "aggregator_notice_date",
+     "type": "TEXT",
+     "label": "第三方数据里的公告日，不是法定披露日，不得当作披露时点",
+     "unit": null
+    },
+    {
+     "name": "currency",
+     "type": "TEXT",
+     "label": "币种",
+     "unit": null
+    },
+    {
+     "name": "sales_services",
+     "type": "REAL",
+     "label": "销售商品、提供劳务收到的现金",
+     "unit": "元"
+    },
+    {
+     "name": "total_operate_inflow",
+     "type": "REAL",
+     "label": "经营活动现金流入小计",
+     "unit": "元"
+    },
+    {
+     "name": "total_operate_outflow",
+     "type": "REAL",
+     "label": "经营活动现金流出小计",
+     "unit": "元"
+    },
+    {
+     "name": "netcash_operate",
+     "type": "REAL",
+     "label": "经营活动产生的现金流量净额",
+     "unit": "元"
+    },
+    {
+     "name": "construct_long_asset",
+     "type": "REAL",
+     "label": "购建固定资产、无形资产和其他长期资产支付的现金",
+     "unit": "元"
+    },
+    {
+     "name": "netcash_invest",
+     "type": "REAL",
+     "label": "投资活动产生的现金流量净额",
+     "unit": "元"
+    },
+    {
+     "name": "assign_dividend_porfit",
+     "type": "REAL",
+     "label": "分配股利、利润或偿付利息支付的现金",
+     "unit": "元"
+    },
+    {
+     "name": "netcash_finance",
+     "type": "REAL",
+     "label": "筹资活动产生的现金流量净额",
+     "unit": "元"
+    },
+    {
+     "name": "rate_change_effect",
+     "type": "REAL",
+     "label": "汇率变动对现金及现金等价物的影响",
+     "unit": "元"
+    },
+    {
+     "name": "cce_add",
+     "type": "REAL",
+     "label": "现金及现金等价物净增加额",
+     "unit": "元"
+    },
+    {
+     "name": "begin_cce",
+     "type": "REAL",
+     "label": "期初现金及现金等价物余额",
+     "unit": "元"
+    },
+    {
+     "name": "end_cce",
+     "type": "REAL",
+     "label": "期末现金及现金等价物余额",
+     "unit": "元"
+    }
+   ]
+  },
+  {
+   "name": "dataset_metadata",
+   "kind": "dictionary",
+   "row_count": 17,
+   "columns": [
+    {
+     "name": "key",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "value",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    }
+   ]
+  },
+  {
+   "name": "disclosure_calendar",
+   "kind": "data",
+   "row_count": 9,
+   "columns": [
+    {
+     "name": "fiscal_year",
+     "type": "INTEGER",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "report_type",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "title",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "official_disclosed_date",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "announcement_id",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "revised",
+     "type": "INTEGER",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "source",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "artifact_sha256",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    }
+   ]
+  },
+  {
+   "name": "field_dictionary",
+   "kind": "dictionary",
+   "row_count": 84,
+   "columns": [
+    {
+     "name": "source_table",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "field",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "display_name",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "unit",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    }
+   ]
+  },
+  {
+   "name": "income_statement",
+   "kind": "data",
+   "row_count": 110,
+   "columns": [
+    {
+     "name": "security_code",
+     "type": "TEXT",
+     "label": "证券代码",
+     "unit": null
+    },
+    {
+     "name": "report_date",
+     "type": "TEXT",
+     "label": "报告期末日",
+     "unit": null
+    },
+    {
+     "name": "report_type",
+     "type": "TEXT",
+     "label": "报告类型：年报、中报、一季报、三季报",
+     "unit": null
+    },
+    {
+     "name": "fiscal_year",
+     "type": "INTEGER",
+     "label": "会计年度",
+     "unit": null
+    },
+    {
+     "name": "basis",
+     "type": "TEXT",
+     "label": "口径：原始披露、追溯调整后、未核实",
+     "unit": null
+    },
+    {
+     "name": "verified",
+     "type": "INTEGER",
+     "label": "是否已与法定披露原文核对（1 是 0 否）",
+     "unit": null
+    },
+    {
+     "name": "verified_against",
+     "type": "TEXT",
+     "label": "核对所依据的年度报告",
+     "unit": null
+    },
+    {
+     "name": "aggregator_notice_date",
+     "type": "TEXT",
+     "label": "第三方数据里的公告日，不是法定披露日，不得当作披露时点",
+     "unit": null
+    },
+    {
+     "name": "currency",
+     "type": "TEXT",
+     "label": "币种",
+     "unit": null
+    },
+    {
+     "name": "total_operate_income",
+     "type": "REAL",
+     "label": "营业总收入",
+     "unit": "元"
+    },
+    {
+     "name": "operate_income",
+     "type": "REAL",
+     "label": "营业收入",
+     "unit": "元"
+    },
+    {
+     "name": "total_operate_cost",
+     "type": "REAL",
+     "label": "营业总成本",
+     "unit": "元"
+    },
+    {
+     "name": "operate_cost",
+     "type": "REAL",
+     "label": "营业成本",
+     "unit": "元"
+    },
+    {
+     "name": "sale_expense",
+     "type": "REAL",
+     "label": "销售费用",
+     "unit": "元"
+    },
+    {
+     "name": "manage_expense",
+     "type": "REAL",
+     "label": "管理费用",
+     "unit": "元"
+    },
+    {
+     "name": "research_expense",
+     "type": "REAL",
+     "label": "研发费用",
+     "unit": "元"
+    },
+    {
+     "name": "finance_expense",
+     "type": "REAL",
+     "label": "财务费用",
+     "unit": "元"
+    },
+    {
+     "name": "fe_interest_expense",
+     "type": "REAL",
+     "label": "利息费用",
+     "unit": "元"
+    },
+    {
+     "name": "invest_income",
+     "type": "REAL",
+     "label": "投资收益",
+     "unit": "元"
+    },
+    {
+     "name": "invest_joint_income",
+     "type": "REAL",
+     "label": "对联营企业和合营企业的投资收益",
+     "unit": "元"
+    },
+    {
+     "name": "operate_profit",
+     "type": "REAL",
+     "label": "营业利润",
+     "unit": "元"
+    },
+    {
+     "name": "total_profit",
+     "type": "REAL",
+     "label": "利润总额",
+     "unit": "元"
+    },
+    {
+     "name": "income_tax",
+     "type": "REAL",
+     "label": "所得税费用",
+     "unit": "元"
+    },
+    {
+     "name": "netprofit",
+     "type": "REAL",
+     "label": "净利润",
+     "unit": "元"
+    },
+    {
+     "name": "parent_netprofit",
+     "type": "REAL",
+     "label": "归属于母公司股东的净利润",
+     "unit": "元"
+    },
+    {
+     "name": "minority_interest",
+     "type": "REAL",
+     "label": "少数股东损益",
+     "unit": "元"
+    },
+    {
+     "name": "deduct_parent_netprofit",
+     "type": "REAL",
+     "label": "扣除非经常性损益后归属于母公司股东的净利润",
+     "unit": "元"
+    },
+    {
+     "name": "basic_eps",
+     "type": "REAL",
+     "label": "基本每股收益",
+     "unit": "元/股"
+    }
+   ]
+  },
+  {
+   "name": "metric_dictionary",
+   "kind": "dictionary",
+   "row_count": 10,
+   "columns": [
+    {
+     "name": "metric_name",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "display_name",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "source_table",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "expression_hint",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "unit",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "time_basis",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "description",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "kind",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "base_table",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "value_expression",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "applicable_when",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "reason_if_not",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "queryable",
+     "type": "INTEGER",
+     "label": null,
+     "unit": null
+    }
+   ]
+  },
+  {
+   "name": "official_key_figures",
+   "kind": "data",
+   "row_count": 177,
+   "columns": [
+    {
+     "name": "fiscal_year",
+     "type": "INTEGER",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "item",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "value",
+     "type": "REAL",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "basis",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "column_label",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "source_report",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "disclosed_date",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "page",
+     "type": "INTEGER",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "revised_report",
+     "type": "INTEGER",
+     "label": null,
+     "unit": null
+    }
+   ]
+  },
+  {
+   "name": "reconciliation_rules",
+   "kind": "dictionary",
+   "row_count": 9,
+   "columns": [
+    {
+     "name": "rule_id",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "rule",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "source_table",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "residual_expression",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    }
+   ]
+  },
+  {
+   "name": "table_keys",
+   "kind": "dictionary",
+   "row_count": 3,
+   "columns": [
+    {
+     "name": "table_name",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "key_columns",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "label_columns",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    }
+   ]
+  },
+  {
+   "name": "table_links",
+   "kind": "dictionary",
+   "row_count": 6,
+   "columns": [
+    {
+     "name": "link_name",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "from_table",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "to_table",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "cardinality",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    },
+    {
+     "name": "on_columns",
+     "type": "TEXT",
+     "label": null,
+     "unit": null
+    }
+   ]
+  }
+ ],
+ "metrics": [
+  {
+   "name": "current_ratio",
+   "label": "流动比率",
+   "description": "流动资产除以流动负债",
+   "expression": "total_current_assets / total_current_liab",
+   "unit": "倍",
+   "time_basis": "期末",
+   "tables": [
+    "balance_sheet"
+   ],
+   "applicable_when": "total_current_liab > 1",
+   "reason_if_not": "流动负债为负或在一元以内时不适用",
+   "queryable": true
+  },
+  {
+   "name": "debt_ratio",
+   "label": "资产负债率",
+   "description": "负债合计除以资产总计；0.25 即 25%",
+   "expression": "total_liabilities / total_assets",
+   "unit": "比率",
+   "time_basis": "期末",
+   "tables": [
+    "balance_sheet"
+   ],
+   "applicable_when": "total_assets > 1",
+   "reason_if_not": "资产总计为负或在一元以内时不适用",
+   "queryable": true
+  },
+  {
+   "name": "deduct_ratio",
+   "label": "扣非净利润占比",
+   "description": "扣非归母净利润除以归母净利润；归母净利润为负或接近零时不适用",
+   "expression": "deduct_parent_netprofit / parent_netprofit",
+   "unit": "比率",
+   "time_basis": "报告期",
+   "tables": [
+    "income_statement"
+   ],
+   "applicable_when": "parent_netprofit > 1",
+   "reason_if_not": "归母净利润为负或在一元以内时不适用",
+   "queryable": true
+  },
+  {
+   "name": "free_cash_flow",
+   "label": "自由现金流（简化）",
+   "description": "经营现金流净额减购建长期资产支付的现金；未扣租赁本金偿付，对租赁负债大的公司会高估",
+   "expression": "netcash_operate - construct_long_asset",
+   "unit": "元",
+   "time_basis": "年度",
+   "tables": [
+    "cash_flow"
+   ],
+   "applicable_when": null,
+   "reason_if_not": null,
+   "queryable": true
+  },
+  {
+   "name": "gross_margin",
+   "label": "毛利率",
+   "description": "营业收入减营业成本，除以营业收入；0.25 即 25%",
+   "expression": "(operate_income - operate_cost) / operate_income",
+   "unit": "比率",
+   "time_basis": "报告期",
+   "tables": [
+    "income_statement"
+   ],
+   "applicable_when": "operate_income > 1",
+   "reason_if_not": "营业收入为负或在一元以内时不适用",
+   "queryable": true
+  },
+  {
+   "name": "interest_bearing_debt",
+   "label": "有息负债（含租赁）",
+   "description": "空值按零计；一年内到期的非流动负债可能含无息部分，是上限口径",
+   "expression": "COALESCE(short_loan,0) + COALESCE(noncurrent_liab_1year,0) + COALESCE(long_loan,0) + COALESCE(bond_payable,0) + COALESCE(lease_liab,0)",
+   "unit": "元",
+   "time_basis": "期末",
+   "tables": [
+    "balance_sheet"
+   ],
+   "applicable_when": null,
+   "reason_if_not": null,
+   "queryable": true
+  },
+  {
+   "name": "invest_income_share",
+   "label": "投资收益占营业利润比",
+   "description": "投资收益除以营业利润；营业利润为负或接近零时不适用",
+   "expression": "invest_income / operate_profit",
+   "unit": "比率",
+   "time_basis": "报告期",
+   "tables": [
+    "income_statement"
+   ],
+   "applicable_when": "operate_profit > 1",
+   "reason_if_not": "营业利润为负或在一元以内时不适用",
+   "queryable": true
+  },
+  {
+   "name": "net_margin",
+   "label": "净利率",
+   "description": "净利润除以营业收入；0.25 即 25%",
+   "expression": "netprofit / operate_income",
+   "unit": "比率",
+   "time_basis": "报告期",
+   "tables": [
+    "income_statement"
+   ],
+   "applicable_when": "operate_income > 1",
+   "reason_if_not": "营业收入为负或在一元以内时不适用",
+   "queryable": true
+  },
+  {
+   "name": "ocf_to_netprofit",
+   "label": "经营现金流与净利润之比",
+   "description": "净利润为负时不适用；2021 年起执行新租赁准则的公司，租金支付计入筹资活动，前后期间不可直接比较",
+   "expression": "netcash_operate / income_statement.netprofit",
+   "unit": "倍",
+   "time_basis": "年度",
+   "tables": [
+    "cash_flow",
+    "income_statement"
+   ],
+   "applicable_when": "income_statement.netprofit > 1",
+   "reason_if_not": "净利润为负或在一元以内时不适用",
+   "queryable": true
+  },
+  {
+   "name": "roe_avg",
+   "label": "净资产收益率（平均）",
+   "description": "简单平均口径，与年报披露的加权平均口径不同；期初期末口径不一致时不适用",
+   "expression": "parent_netprofit / ((期初归母权益 + 期末归母权益) / 2)",
+   "unit": "比率",
+   "time_basis": "年度",
+   "tables": [
+    "income_statement",
+    "balance_sheet"
+   ],
+   "applicable_when": null,
+   "reason_if_not": null,
+   "queryable": false
+  }
+ ],
+ "limitations": [
+  {
+   "key": "accounting_note_lease",
+   "label": "租赁准则",
+   "text": "本数据集中租赁负债与使用权资产自 2021 年起出现。修订后的《企业会计准则第 21 号——租赁》对仅在境内上市的企业自 2021 年 1 月 1 日起施行：承租人确认使用权资产与租赁负债，偿还租赁负债本金和利息支付的现金计入筹资活动。因此 2021 年前后的资产负债率、经营活动现金流量不可直接比较"
+  },
+  {
+   "key": "interim_note",
+   "label": "中报与季报",
+   "text": "中报、季报行的口径为未核实"
+  },
+  {
+   "key": "license_note",
+   "label": "使用范围",
+   "text": "第三方整理数据的再分发许可未确认；仅供内部使用"
+  },
+  {
+   "key": "notice_date_note",
+   "label": "公告日",
+   "text": "aggregator_notice_date 是第三方数据里的公告日，与法定披露日不一致；披露时点以 disclosure_calendar 为准"
+  },
+  {
+   "key": "restatement_explanation_2021",
+   "label": "2021 年追溯调整的原因",
+   "text": "2021 年数据被追溯调整的原因，《上海机场2022年年度报告》原文：根据企业会计准则的规定，同一控制下企业合并编制合并报表时，应当视同合并后的报告主体自最终控制方开始控制时点起一直存在，同时应当对比较报表的相关项目进行调整；视同合并后的报告主体自最终控制方开始控制时点起一直存在。因此，公司对期初数和比较报表的相关项目进行了追溯调整和列示。"
+  },
+  {
+   "key": "restatement_note",
+   "label": "追溯调整",
+   "text": "2021 年年报行为追溯调整后口径（依据《上海机场2022年年度报告》）；当年原始披露值见 official_key_figures；跨 2020/2021 的同比与环比不可直接比较"
+  },
+  {
+   "key": "unit_note",
+   "label": "单位",
+   "text": "金额单位为元；basic_eps 为元每股"
+  }
+ ]
+}
