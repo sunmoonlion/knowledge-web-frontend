@@ -1,0 +1,15 @@
+{
+  "id": "default",
+  "title": "登录之后",
+  "description": "knowledge 的数据目录还没有接口（先后顺序第 9 步才做），所以这里只有登录与跨应用跳转的替身。接口做出来之后再录样例。",
+  "signed_in": true,
+  "user": { "display_name": "样例用户" },
+  "pages": [
+    { "title": "公开首页", "path": "/zh-CN" },
+    { "title": "登录页", "path": "/zh-CN/login" },
+    { "title": "仪表盘", "path": "/zh-CN/dashboard" },
+    { "title": "数据目录（页面还没有做）", "path": "/zh-CN/catalog?from=investment" }
+  ],
+  "responses": [],
+  "streams": []
+}
