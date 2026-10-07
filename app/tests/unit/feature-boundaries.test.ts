@@ -120,7 +120,7 @@ describe('一个功能里：取数、状态、渲染分开', () => {
   })
 
   it('这份检查真的看到了文件', () => {
-    expect(features.length).toBeGreaterThanOrEqual(2)
-    expect(featureFiles.map((file) => relative('features', file)).length).toBeGreaterThan(6)
+    expect(features.length).toBeGreaterThanOrEqual(1)
+    expect(featureFiles.map((file) => relative('features', file)).length).toBeGreaterThan(0)
   })
 })

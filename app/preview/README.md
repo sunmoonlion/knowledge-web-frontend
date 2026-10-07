@@ -2,6 +2,8 @@
 
 不连后端、不连集群，在本机把每个页面、每种状态都打开来看。
 
+> 账 56（2026-10-07）起 knowledge 网页端没有给用户看的页面：数据目录移到了 knowledge 管理端。这里只剩登录与登录后的一句说明，情景 `signed-in` 是手写的，没有接口样例。
+
 ```bash
 pnpm preview            # 开发模式：改了页面马上看到
 pnpm preview --built    # 用构建好的那一份（先 pnpm build）

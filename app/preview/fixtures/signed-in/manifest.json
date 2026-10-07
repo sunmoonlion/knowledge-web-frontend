@@ -1,0 +1,17 @@
+{
+  "id": "signed-in",
+  "title": "登录之后",
+  "description": "账 56 起 knowledge 网页端没有给用户看的页面：登录后只有一句说明。没有接口要录，这份是手写的。",
+  "signed_in": true,
+  "user": {
+    "display_name": "样例用户"
+  },
+  "pages": [
+    {
+      "title": "登录之后",
+      "path": "/zh-CN/dashboard"
+    }
+  ],
+  "responses": [],
+  "streams": []
+}
