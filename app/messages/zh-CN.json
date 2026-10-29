@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "SunmoonAI Web",
-    "description": "与专属 Nest Web Backend 配对的生产级 Next.js 前端底座。",
+    "title": "knowbase",
+    "description": "我的数据：上传、描述、展示给我的应用。",
     "loginTitle": "登录",
     "workspaceTitle": "工作区"
   },
@@ -17,10 +17,10 @@
     "back": "返回"
   },
   "public": {
-    "title": "面向产品 Web 应用的可靠通用底座",
-    "description": "公开内容、受权工作区、API 访问和实时交互都采用明确的渲染、安全与数据归属边界。",
+    "title": "我的数据都在这里",
+    "description": "上传自己的资料、看为我采集的和买来的、决定展示给哪个应用。knowbench、knowlab、knowmart 里看到的数据，都在这里管。",
     "login": "登录",
-    "workspace": "进入工作区"
+    "workspace": "进入我的数据"
   },
   "errors": {
     "notFoundTitle": "页面不存在",
@@ -83,8 +83,327 @@
   },
   "Dashboard": {},
   "shell": {
-    "brand": "数据服务",
-    "nothingHere": "这里没有给你看的页面。",
-    "hint": "数据在 knowbench 里问专家或代理就有；数据目录在管理后台。"
+    "brand": "knowbase",
+    "navigation": "knowbase 导航",
+    "nav": {
+      "library": "我的数据",
+      "upload": "上传",
+      "consents": "给平台的授权",
+      "settings": "设置"
+    }
+  },
+  "pages": {
+    "library": {
+      "title": "我的数据",
+      "lead": "我名下的全部资料：我上传的、为我采集的、买来的、产出。在这里看、改描述、决定展示给哪个应用。"
+    },
+    "upload": {
+      "title": "上传",
+      "lead": "收 PDF、Excel、CSV、文本、Markdown，单份 50 MB，一个账号共 1 GB。"
+    },
+    "consents": {
+      "title": "给平台的授权",
+      "lead": "我给平台过程留下的授权、在 knowfeed 建订阅时的范围同意。每条都能撤，撤了立即停。"
+    },
+    "settings": {
+      "title": "设置",
+      "lead": "账号级的选项。"
+    }
+  },
+  "library": {
+    "form": {
+      "pending": "待确认",
+      "docType": "类型",
+      "notSet": "未填",
+      "subject": "主体（证券代码）",
+      "subjectPlaceholder": "如 600519.SH、00700.HK",
+      "reportYear": "报告年度",
+      "period": "报告期 {start} 至 {end}",
+      "periodRange": "期间",
+      "periodStart": "期间开始",
+      "periodEnd": "期间结束",
+      "disclosedOn": "发布日期",
+      "edition": "版本形态",
+      "industry": "行业",
+      "language": "语言",
+      "topics": "事项",
+      "researchHint": "研报的几维：从首页识别的请核一下，确认了才算。",
+      "institution": "发布机构",
+      "analysts": "研究员",
+      "analystsPlaceholder": "多位用顿号或逗号隔开",
+      "rating": "评级",
+      "market": "市场",
+      "depth": "深度",
+      "frequency": "更新频率",
+      "forecast": "盈利预测"
+    },
+    "upload": {
+      "directTitle": "{app} 缺这一样资料，采不来，请在这里上传",
+      "directHint": "描述已按 {app} 要的预填。传完会同时展示给 {app}，再回到原来的页面。",
+      "pick": "选文件",
+      "limits": "PDF、Excel（xlsx、xls）、CSV、文本、Markdown，单份不超过 {size}。",
+      "space": "已用 {used}，共 {quota}。",
+      "tooLarge": "文件超过 {size}，传不了。",
+      "recognizing": "正在按文件名和首页识别描述…",
+      "recognized": "识别出 {count} 栏，标「待确认」，请核一下。",
+      "recognizedNothing": "没识别出什么，请自己填。",
+      "rulesVersion": "（识别规则第 {version} 版）",
+      "duplicate": "已经有一份同名、描述相同的资料。这一份是：",
+      "anotherMaterial": "另一份资料",
+      "asNewVersion": "「{name}」的新版本（第 {version} 版）",
+      "describe": "描述",
+      "describeHint": "描述决定这份资料能不能被应用按「要什么数据」找到。",
+      "confirm": "描述无误，我确认",
+      "confirmHint": "不确认也能传，但标「待确认」，不参与解析；以后在详情里确认。",
+      "process": "交 knowfeed 加工",
+      "processHint": "会交 knowfeed 加工出正文、按页文字、表格（类型对得上的走领域插件，如年报抽表），扫描版与检索索引由 knowbase 经 RAGFlow 做；knowfeed 只处理这一份、不留副本。勾了就是采用加工。",
+      "defaultShown": "传完按账号设置展示给 knowbench、knowlab。",
+      "defaultNotShown": "传完先不展示给任何应用，可在详情里点展示按钮。",
+      "uploading": "正在上传…",
+      "submit": "上传",
+      "willReturn": "传完回到原来的页面",
+      "quotaHint": "删掉不用的资料可以腾出空间。"
+    },
+    "license": {
+      "title": "许可档",
+      "self": "只许本人用",
+      "via_expert": "可以经专家给别人用",
+      "sale": "可以出售",
+      "attest": "我有权让这份资料「{license}」。",
+      "current": "现在：{license}",
+      "change": "改许可档",
+      "logged": "改高要勾「我有权」，改高改低都留痕。",
+      "fixed": "采集来的、买来的、产出转来的由系统定，不能改。"
+    },
+    "errors": {
+      "unknown": "没成，请重试（{code}）。",
+      "type_not_allowed": "只收 PDF、Excel（xlsx、xls）、CSV、文本、Markdown。",
+      "content_mismatch": "文件内容和扩展名对不上。",
+      "not_utf8": "文本文件要是 UTF-8 编码。",
+      "empty": "文件是空的。",
+      "too_large": "文件超过 50 MB。",
+      "quota_exceeded": "空间用满了（1 GB）。",
+      "attest_required": "选高档要先勾「我有权」。",
+      "name_invalid": "文件名不合规矩。",
+      "license_fixed": "这份的许可档由系统定，不能改。",
+      "license_above_upstream": "上游数据不许这么高的档。",
+      "item_not_found": "没有这份资料，或不是你的。",
+      "version_not_found": "没有这一版。",
+      "expert_not_found": "不是你名下的专家。",
+      "not_owner": "只有所有者能交给 knowmart。",
+      "use_invalid": "这种展示不认。",
+      "output_immutable": "产出不改；要改先转为数据。",
+      "version_conflict": "刚有别的新版本传上来了，请刷新再试。",
+      "not_upload": "只有上传的资料按本人同意交加工。",
+      "subject_invalid": "主体编号不认得（如 600519.SH）。",
+      "doc_type_invalid": "类型不在词表里。",
+      "period_invalid": "期间要两头都填，开始不晚于结束。",
+      "attributes_invalid": "研报的几维填得不对。",
+      "topics_invalid": "事项不在词表里。",
+      "subscription_not_found": "这条订阅已经撤了。",
+      "contract_invalid": "后端回来的内容对不上，请刷新。",
+      "request_failed": "没连上，请重试。"
+    },
+    "categories": {
+      "uploaded": "我上传的",
+      "collected": "为我采集的",
+      "purchased": "买来的",
+      "output": "产出"
+    },
+    "status": {
+      "unconfirmed": "待确认",
+      "confirmed": "本人确认过",
+      "checked": "入库质检过"
+    },
+    "detail": {
+      "versions": "{count} 个内容版本",
+      "close": "关闭",
+      "description": "描述",
+      "oldVocabulary": "用的是旧词表，请重新确认",
+      "unconfirmedHint": "自动识别或迁移来的描述，点确认后才参与解析。",
+      "saveConfirm": "保存并确认",
+      "saveOnly": "只保存",
+      "notOwner": "描述由所有者维护。",
+      "contentVersions": "内容版本与读法",
+      "versionsHint": "内容版本是内容的替换；读法是同一版的正文、按页文字、表格、检索索引。",
+      "download": "下载",
+      "hideReadings": "收起读法",
+      "showReadings": "看读法",
+      "processThis": "交加工",
+      "newVersion": "上传新版本",
+      "processNew": "交 knowfeed 加工这一版",
+      "uploadVersion": "传新版本"
+    },
+    "readings": {
+      "loading": "正在取读法…",
+      "text": "正文",
+      "pages": "按页文字",
+      "table": "表格",
+      "index": "检索索引",
+      "none": "还没有",
+      "status": {
+        "pending": "加工中",
+        "ready": "就绪",
+        "failed": "没成"
+      }
+    },
+    "display": {
+      "title": "展示到哪里",
+      "toApp": "展示给 {app}",
+      "knowbenchHint": "同时用于委托和会话；会话里模型可以按需读栏里的任何一份。",
+      "toMarket": "交给 knowmart 待上架",
+      "marketHint": "上架时 knowmart 再核许可档。",
+      "bindExpert": "绑给专家",
+      "bindOwnExpert": "绑给自用专家",
+      "bindHint": "专家跑在请它的人的电脑上，绑定的原文会进入它的上下文；我们只保证没有浏览、下载入口。取消绑定只影响下一版，已交付的版本照旧。",
+      "noExperts": "名下还没有专家（knowlab 建版本后会出现在这里）。",
+      "frozen": "已冻结在：{list}"
+    },
+    "impact": {
+      "title": "会受影响的：",
+      "none": "没有别的地方用着它。",
+      "market": "交给着 knowmart：会跟着撤下",
+      "marketLowering": "交给着 knowmart：知识条目会下架",
+      "bound": "绑给了专家（下一版）：{list}",
+      "frozen": "冻结在专家版本里（照旧可读）：{list}",
+      "holders": "{count} 位买家或引用的人（照旧可读）",
+      "grants": "{count} 条在跑的授权钉着它（到期或任务结束为止）"
+    },
+    "convert": {
+      "title": "产出转为数据",
+      "hint": "新建一份资料，自动带出处（哪位专家哪一版、哪件任务、用了哪几份数据）。上游有受限数据的，不能选高于上游的档。",
+      "submit": "转为数据",
+      "done": "已转为数据，在「我上传的」里。"
+    },
+    "reads": {
+      "title": "谁读过",
+      "none": "还没有人读过。",
+      "operation": {
+        "owner-download": "本人下载",
+        "content": "读原件",
+        "format": "只看格式",
+        "check": "核对",
+        "rendition": "读读法",
+        "process": "加工",
+        "purchase-copy": "成交复制（旧）"
+      },
+      "role": {
+        "operator": "平台人员",
+        "machine": "平台重跑",
+        "system": "knowfeed 加工",
+        "self": "本人（knowbase）",
+        "unknown": "未知"
+      }
+    },
+    "history": {
+      "title": "改动留痕",
+      "none": "无",
+      "license": "许可档 {from} → {to}（{attested}）",
+      "attested": "勾了「我有权」",
+      "notAttested": "没勾「我有权」",
+      "recognized": "上传时识别（规则第 {version} 版）",
+      "description": "改了描述"
+    },
+    "delete": {
+      "start": "删这份",
+      "explain": "删只是从栏里拿掉：买家、钉住的测试与专家版本照旧能读。",
+      "confirm": "确认删",
+      "cancel": "不删了"
+    },
+    "shelf": {
+      "space": "空间",
+      "defaultTitle": "新数据默认展示给我的全部应用",
+      "defaultExplain": "开着时，我上传的、为我采集的新数据会自动展示给 knowbench、knowlab；买来的、产出转来的要我自己点。点一下「知道了」或「改」才生效。",
+      "defaultKeep": "知道了，保持开",
+      "defaultOff": "改为不默认展示",
+      "unconfirmedHint": "有 {count} 份资料的描述还没确认，确认后才参与解析。",
+      "unconfirmedShow": "逐份确认",
+      "categories": "分类",
+      "all": "全部",
+      "upload": "上传",
+      "filters": "筛选",
+      "filterSubject": "主体",
+      "filterClass": "大类",
+      "filterType": "细类",
+      "filterYear": "年份",
+      "filterShown": "展示到",
+      "shownNowhere": "哪里都没展示",
+      "filterUnconfirmed": "只看未确认",
+      "clear": "清除",
+      "checked": "选了 {count} 份",
+      "bulkShow": "展示给 {app}",
+      "bulkHide": "不再展示给 {app}",
+      "bulkDelete": "删",
+      "bulkDeleteConfirm": "删这 {count} 份？买家、钉住的测试与专家版本照旧能读。",
+      "title": "资料",
+      "loading": "加载中…",
+      "empty": "还没有资料。上传一份试试。",
+      "noMatch": "没有对得上的。",
+      "checkAll": "全选",
+      "name": "名字",
+      "description": "描述",
+      "status": "确认",
+      "license": "许可档",
+      "size": "大小",
+      "shown": "展示到",
+      "origin": {
+        "disclosure": "公开披露",
+        "collected": "采集",
+        "upload": "上传",
+        "output": "产出"
+      },
+      "versionCount": "{count} 版",
+      "noDescription": "没有描述",
+      "statusUnconfirmed": "待确认",
+      "statusName": {
+        "confirmed": "本人确认过",
+        "checked": "质检过"
+      },
+      "licenseName": {
+        "self": "只许本人用",
+        "via_expert": "可经专家给别人用",
+        "sale": "可以出售"
+      },
+      "notFound": "这份资料不在我名下，或已删。",
+      "use": {
+        "market": "交给 knowmart",
+        "expert": "专家 {expert}",
+        "frozenExpert": "专家 {expert}@{version}"
+      }
+    },
+    "consents": {
+      "platformTitle": "我给平台的授权",
+      "platformHint": "knowlab 平台孵化、平台测试、交付审核、自助重跑时留下的：哪次过程、哪几份、到什么时候、平台人员读过几次。",
+      "platformNone": "没有在用的授权。",
+      "kind": {
+        "incubate": "平台孵化",
+        "test": "平台测试",
+        "review": "交付审核",
+        "rerun": "自助重跑"
+      },
+      "withdraw": "撤回",
+      "withdrawConfirm": "撤回后这次过程立即读不到这些资料。确定？",
+      "since": "{date} 起",
+      "until": "到 {date}",
+      "untilProcess": "到过程结束",
+      "operatorReads": "平台人员读过 {count} 次",
+      "subscriptionTitle": "订阅范围同意",
+      "subscriptionHint": "在 knowfeed 建订阅时留下的。撤了就不再生成新的需求。",
+      "subscriptionNone": "没有订阅。",
+      "revision": "第 {revision} 次修订",
+      "unsubscribe": "撤回",
+      "unsubscribeConfirm": "撤回后 knowfeed 不再按这条订阅生成新需求。确定？",
+      "range": "{start} 至 {end}",
+      "by": {
+        "description": "按描述订",
+        "url": "按网址订",
+        "topic": "按主题订"
+      }
+    },
+    "settings": {
+      "defaultDisplay": "新数据默认展示给我的全部应用",
+      "defaultDisplayHint": "只对「我上传的」「为我采集的」生效；买来的、产出转来的由我自己点。",
+      "notSeen": "还没点过：现在不会自动展示。点一下开关就生效。"
+    }
   }
 }
